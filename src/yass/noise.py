@@ -177,7 +177,7 @@ def get_noise_covariance(reader, CONFIG):
     small_batch = reader.read_data(
                 data_start=reader.rec_len//2 - chunk_5sec//2 + reader.offset,
                 data_end=reader.rec_len//2 + chunk_5sec//2 + reader.offset)
-    np.save('/Volumes/Lab/Users/ericwu/small_batch.npy', small_batch)
+    #np.save('/Volumes/Lab/Users/ericwu/small_batch.npy', small_batch)
     
     # get noise floor of recording
     noised_killed, is_noise_idx = kill_signal(small_batch, 3, CONFIG.spike_size)
