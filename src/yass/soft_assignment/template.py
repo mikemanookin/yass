@@ -355,7 +355,7 @@ class TEMPLATE_ASSIGN_OBJECT(object):
                                     shifts[ii_start:ii_end],
                                     temp_ids[ii_start:ii_end],
                                     self.coeff_list[iteration], 
-                                    torch.full( (ii_end - ii_start, ), 2 ).cuda())
+                                    torch.full( (ii_end - ii_start, ), 2 ).cuda().float())
             obj = obj[:,5:-5].reshape((self.n_chans, (ii_end-ii_start), n_times))
             shifted_templates[ii_start:ii_end] = obj.transpose(0,1).transpose(1,2)
     
