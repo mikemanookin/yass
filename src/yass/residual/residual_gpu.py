@@ -252,7 +252,7 @@ class RESIDUAL_GPU2(object):
                 time_sec_start = batch_id*self.reader.n_sec_chunk
                 fname_templates = os.path.join(self.templates_dir,
                                                'templates_{}sec.npy'.format(
-                                                   time_sec_start))
+                                                   int(time_sec_start)))
                 self.load_templates(fname_templates)
                 self.make_bsplines_parallel()
 
