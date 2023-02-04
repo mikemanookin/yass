@@ -381,7 +381,7 @@ class TEMPLATE_ASSIGN_OBJECT(object):
                     time_sec_start = batch_id*self.reader_residual.n_sec_chunk
                     fname_templates = os.path.join(
                         self.templates_dir,
-                        'templates_{}sec.npy'.format(time_sec_start))
+                        'templates_{}sec.npy'.format(int(time_sec_start)))
                     self.templates = np.load(fname_templates)
                     self.get_template_data()
 
